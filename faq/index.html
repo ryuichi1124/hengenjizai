@@ -9,6 +9,20 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-1P9MWLDR5L');
+  // CV計測: 電話タップ / 地図タップ
+  document.addEventListener('click', function(e){
+    var tel = e.target.closest('a[href^="tel:"]');
+    if (tel) {
+      var phone = tel.getAttribute('href').replace('tel:','').replace(/[^0-9]/g,'');
+      gtag('event', 'phone_click', { phone_number: phone, page_path: location.pathname, link_text: tel.textContent.trim() });
+      gtag('event', 'generate_lead', { currency: 'JPY', value: 1, method: 'phone' });
+      return;
+    }
+    var map = e.target.closest('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]');
+    if (map && !map.closest('iframe')) {
+      gtag('event', 'map_click', { link_url: map.getAttribute('href'), page_path: location.pathname });
+    }
+  });
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
