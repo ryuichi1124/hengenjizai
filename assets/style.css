@@ -25,8 +25,17 @@ html.no-loader .loader{display:none}
 
 /* Logos */
 .logo-img{display:block;height:auto;width:auto}
-header .logo-img{height:28px;max-height:36px}
-@media(max-width:600px){header .logo-img{height:24px}}
+header .logo{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--font-mincho);font-size:18px;letter-spacing:.18em;color:var(--c-ink);
+  line-height:1;
+}
+header .logo-img{height:26px;width:auto;max-width:48px;display:block}
+header .logo-text{display:inline-block;line-height:1;white-space:nowrap}
+@media(max-width:600px){
+  header .logo-img{height:22px;max-width:40px}
+  header .logo{font-size:15px;gap:8px;letter-spacing:.15em}
+}
 footer .logo-img{height:72px;margin:0 auto 4px;max-width:220px}
 
 :root{

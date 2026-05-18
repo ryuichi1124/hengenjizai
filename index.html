@@ -84,7 +84,7 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
 
 <header>
   <div class="row">
-    <a href="/" class="logo" aria-label="変幻自在 トップへ"><img src="/assets/logo.svg" alt="変幻自在" class="logo-img"></a>
+    <a href="/" class="logo" aria-label="変幻自在 トップへ"><img src="/assets/logo.svg" alt="" class="logo-img" aria-hidden="true"><span class="logo-text">変幻自在</span></a>
     <nav>
       <a href="#menu">お品書き</a>
       <a href="/voice/">お客様の声</a>
@@ -422,12 +422,14 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
 </nav>
 
 <script>
-window.addEventListener('load',function(){
-  setTimeout(function(){
-    var l=document.getElementById('loader');
-    if(l)l.classList.add('is-hidden');
-  },800);
-});
+(function(){
+  var l=document.getElementById('loader');
+  if(!l)return;
+  function hide(){l.classList.add('is-hidden')}
+  if(document.readyState==='complete'){setTimeout(hide,800)}
+  else{window.addEventListener('load',function(){setTimeout(hide,800)},{once:true})}
+  setTimeout(hide,3500);
+})();
 sessionStorage.setItem('hjz_loaded','1');
 </script>
 
