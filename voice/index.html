@@ -4,20 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
-<title>お客様の声｜変幻自在（博多駅南・筑紫口の居酒屋）</title>
-<meta name="description" content="変幻自在へお越しくださいましたお客様からいただいたお声を、ご利用シーンごとにご紹介しております。Googleレビュー評価4.8。博多駅・筑紫口より徒歩10分。">
+<title>お客様の声｜変幻自在｜博多駅南の居酒屋</title>
+<meta name="description" content="変幻自在へお越しくださいましたお客様からのお声。出張のご利用・お一人様・地元の常連様・お料理についてのご感想。Google評価4.8、博多駅・筑紫口より徒歩10分の十席カウンター。">
+<meta name="keywords" content="変幻自在 口コミ,博多駅 居酒屋 口コミ,博多 居酒屋 評判,博多駅南 居酒屋 おすすめ,博多 一人飲み 口コミ">
 <link rel="canonical" href="https://hengenjizai-hakata.com/voice/">
+<link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+<link rel="apple-touch-icon" href="/assets/logo.svg">
 <meta name="theme-color" content="#fbf8f3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="お客様の声｜変幻自在">
-<meta property="og:description" content="変幻自在にお越しくださいましたお客様からのお声をご紹介しております。">
+<meta property="og:title" content="お客様の声｜変幻自在｜博多駅南の居酒屋">
+<meta property="og:description" content="変幻自在にお越しくださいましたお客様からのお声。Google評価4.8、博多駅・筑紫口より徒歩10分の十席カウンター。">
 <meta property="og:url" content="https://hengenjizai-hakata.com/voice/">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="変幻自在">
 <meta property="og:image" content="https://hengenjizai-hakata.com/assets/interior.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="お客様の声｜変幻自在">
-<meta name="twitter:description" content="変幻自在にお越しくださいましたお客様からのお声をご紹介しております。">
+<meta name="twitter:title" content="お客様の声｜変幻自在｜博多駅南の居酒屋">
+<meta name="twitter:description" content="変幻自在にお越しくださいましたお客様からのお声。Google評価4.8、博多駅・筑紫口より徒歩10分。">
 <meta name="twitter:image" content="https://hengenjizai-hakata.com/assets/interior.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,8 +48,13 @@
   "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"6","bestRating":"5","worstRating":"1"}
 }
 </script>
+<script>if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add('no-loader')}</script>
 </head>
 <body>
+
+<div class="loader" id="loader">
+  <img src="/assets/logo.svg" alt="変幻自在" class="loader-logo">
+</div>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></symbol>
@@ -58,7 +66,7 @@
 
 <header>
   <div class="row">
-    <a href="/" class="logo">変幻自在<span class="sm">HAKATA</span></a>
+    <a href="/" class="logo" aria-label="変幻自在 トップへ"><img src="/assets/logo.svg" alt="変幻自在" class="logo-img"></a>
     <nav>
       <a href="/#about">お店について</a>
       <a href="/#menu">お品書き</a>
@@ -197,7 +205,7 @@
 </section>
 
 <footer>
-  <div class="logo">変幻自在</div>
+  <div class="logo"><img src="/assets/logo.svg" alt="変幻自在" class="logo-img"></div>
   <p>博多駅南・筑紫口の居酒屋</p>
   <p>〒812-0016 福岡県福岡市博多区博多駅南3-9-21 102 / TEL 092-402-8110</p>
   <nav>
@@ -214,6 +222,16 @@
   <a href="/#menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>品書き</a>
   <a href="https://maps.app.goo.gl/iHLLd2m7xEdmFTqz5" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>地図</a>
 </nav>
+
+<script>
+window.addEventListener('load',function(){
+  setTimeout(function(){
+    var l=document.getElementById('loader');
+    if(l)l.classList.add('is-hidden');
+  },800);
+});
+sessionStorage.setItem('hjz_loaded','1');
+</script>
 
 </body>
 </html>
