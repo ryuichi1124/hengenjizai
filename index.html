@@ -16,9 +16,13 @@
 <meta property="og:url" content="https://hengenjizai-hakata.com/">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="変幻自在">
+<meta property="og:image" content="https://hengenjizai-hakata.com/assets/exterior.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1067">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="変幻自在｜博多駅南・路地裏の十席">
 <meta name="twitter:description" content="博多駅徒歩10分。黒板の日替わりと、気軽な一杯を。一軒目のあとに、ふらっと。">
+<meta name="twitter:image" content="https://hengenjizai-hakata.com/assets/exterior.jpg">
 
 <script type="application/ld+json">
 {
@@ -27,6 +31,11 @@
   "name": "変幻自在",
   "alternateName": "ヘンゲンジザイ",
   "description": "博多駅筑紫口から徒歩約10分。十席だけの路地裏の小さな居酒屋。コース料理は無く、黒板の日替わり一品で気軽な一杯を。",
+  "image": [
+    "https://hengenjizai-hakata.com/assets/exterior.jpg",
+    "https://hengenjizai-hakata.com/assets/interior.jpg"
+  ],
+  "maximumAttendeeCapacity": 10,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "博多駅南3丁目9-21 102",
@@ -115,32 +124,27 @@ header .tel-mini{display:inline-flex;align-items:center;gap:6px;color:var(--c-ac
 
 /* Hero */
 .hero{
-  min-height:100vh;display:flex;align-items:center;justify-content:center;
-  text-align:center;padding:100px 24px 60px;
+  min-height:100vh;display:flex;align-items:flex-end;justify-content:center;
+  text-align:center;padding:120px 24px 64px;
   background:
-    linear-gradient(180deg,rgba(251,248,243,.4),rgba(251,248,243,.85)),
-    url('https://images.unsplash.com/photo-1554502078-ef0fc409efce?w=1600') center/cover;
+    linear-gradient(180deg,rgba(251,248,243,.0) 0%,rgba(251,248,243,.0) 40%,rgba(251,248,243,.65) 75%,rgba(251,248,243,.95) 100%),
+    url('./assets/exterior.jpg') center 35%/cover no-repeat;
   position:relative;
 }
-.hero::before{
-  content:"";position:absolute;top:60px;left:50%;transform:translateX(-50%);
-  width:140px;height:60px;
-  background:linear-gradient(180deg,var(--c-accent) 0%,var(--c-accent) 55%,#7c1d10 55%,#7c1d10 100%);
-  border-radius:0 0 6px 6px;
-  box-shadow:0 4px 16px rgba(0,0,0,.15);
-  opacity:.92;
-}
-.hero::after{
-  content:"暖簾";position:absolute;top:80px;left:50%;transform:translateX(-50%);
-  font-family:var(--font-mincho);color:#fff;font-size:14px;letter-spacing:.3em;
-  opacity:0;
+@media(max-width:720px){
+  .hero{
+    background-position:center 40%;
+    align-items:flex-end;
+    padding-bottom:80px;
+  }
 }
 .hero h1{
   font-family:var(--font-mincho);
   font-size:clamp(40px,10vw,84px);
   letter-spacing:.2em;color:var(--c-ink);
-  margin:60px 0 20px;
+  margin:0 0 20px;
   font-weight:600;
+  text-shadow:0 2px 16px rgba(251,248,243,.6);
 }
 .hero .sub{
   font-family:var(--font-mincho);
@@ -238,6 +242,27 @@ section{padding:96px 0;border-top:1px dashed var(--c-line)}
   color:var(--c-mute);line-height:2;
   font-family:var(--font-mincho);
 }
+.menu-intro{
+  text-align:center;font-family:var(--font-mincho);
+  font-size:15px;line-height:2.2;color:var(--c-mute);
+  margin-bottom:32px;
+}
+.menu-h3{
+  font-family:var(--font-mincho);
+  font-size:18px;letter-spacing:.3em;
+  color:var(--c-ink);
+  text-align:center;margin:64px 0 28px;
+  position:relative;
+}
+.menu-h3::before,.menu-h3::after{
+  content:"";display:inline-block;width:40px;height:1px;background:var(--c-line);
+  vertical-align:middle;margin:0 16px;
+}
+.blackboard.small{padding:28px 24px;margin-bottom:48px}
+.blackboard.small h3{margin-bottom:8px;font-size:20px}
+.blackboard.small .note{margin-top:8px;color:rgba(247,242,216,.75);font-size:13px}
+.menu-regular.cols-3{display:grid;gap:32px}
+@media(min-width:720px){.menu-regular.cols-3{grid-template-columns:repeat(3,1fr)}}
 
 /* Scene */
 .scenes{display:grid;gap:20px}
@@ -259,7 +284,8 @@ section{padding:96px 0;border-top:1px dashed var(--c-line)}
 /* Space */
 .space-row{display:grid;gap:24px;align-items:center}
 @media(min-width:720px){.space-row{grid-template-columns:1fr 1fr}}
-.space-row img{aspect-ratio:4/3;object-fit:cover;width:100%;filter:sepia(.1)}
+.space-row img{aspect-ratio:3/4;object-fit:cover;width:100%}
+@media(max-width:720px){.space-row img{aspect-ratio:4/3}}
 .space-text p{font-family:var(--font-mincho);font-size:15px;line-height:2.2;margin-bottom:1em}
 .space-spec{
   margin-top:24px;display:grid;grid-template-columns:auto 1fr;gap:8px 20px;
@@ -391,49 +417,135 @@ footer .copyright{font-size:11px;color:var(--c-mute);margin-top:32px;letter-spac
 <section id="menu">
   <div class="container">
     <div class="sect-label">MENU</div>
-    <h2 class="sect-title">品書き<small>Today's Blackboard & Regular Menu</small></h2>
+    <h2 class="sect-title">品書き<small>Food &amp; Drinks</small></h2>
 
-    <div class="blackboard">
-      <h3>本日の黒板から（一例）</h3>
-      <ul>
-        <li><span>ぶり刺し　胡麻醤油</span><span class="price">¥1,200</span></li>
-        <li><span>長崎産　牡蠣の酒蒸し</span><span class="price">¥900</span></li>
-        <li><span>鶏白レバーの炙り</span><span class="price">¥780</span></li>
-        <li><span>春菊と油揚げのおひたし</span><span class="price">¥580</span></li>
-        <li><span>大根とほたての煮物</span><span class="price">¥780</span></li>
-        <li><span>〆の鯛茶漬け</span><span class="price">¥880</span></li>
-      </ul>
-      <p class="note">※ その日の仕入れで変わります。コース料理はございません。</p>
+    <p class="menu-intro">
+      お料理は、仕入れと店主の気分で日々変わります。<br>
+      下記は定番のお品書き。本日のおすすめは、店頭の黒板にて。
+    </p>
+
+    <div class="blackboard small">
+      <h3>本日のおすすめは黒板にて</h3>
+      <p class="note">その日の市場と店主の気分で、変幻自在に。</p>
     </div>
 
-    <div class="menu-regular">
+    <h3 class="menu-h3">お料理</h3>
+    <div class="menu-regular cols-2">
       <div class="menu-block">
-        <h3>定番の一品</h3>
+        <h3>刺身・肴</h3>
         <ul>
-          <li><span>お通し</span><span class="price">¥500</span></li>
-          <li><span>だし巻き玉子</span><span class="price">¥780</span></li>
-          <li><span>もつ煮込み</span><span class="price">¥680</span></li>
-          <li><span>ポテトサラダ</span><span class="price">¥580</span></li>
-          <li><span>本日の刺身三種盛り</span><span class="price">¥1,500</span></li>
-          <li><span>炙りしめ鯖</span><span class="price">¥980</span></li>
+          <li><span>天然タイの昆布〆</span><span class="price">¥990</span></li>
+          <li><span>アジのなめろう</span><span class="price">¥880</span></li>
+          <li><span>〆サバ</span><span class="price">¥580</span></li>
+          <li><span>板わさ</span><span class="price">¥380</span></li>
+          <li><span>ガツシンぽん酢</span><span class="price">¥580</span></li>
         </ul>
       </div>
       <div class="menu-block">
-        <h3>お酒</h3>
+        <h3>焼き・鉄板</h3>
         <ul>
-          <li><span>生ビール</span><span class="price">¥600</span></li>
-          <li><span>ハイボール</span><span class="price">¥500</span></li>
-          <li><span>日本酒（季節銘柄）</span><span class="price">¥700〜</span></li>
-          <li><span>焼酎（芋・麦・米）</span><span class="price">¥500〜</span></li>
-          <li><span>梅酒・果実酒</span><span class="price">¥600</span></li>
-          <li><span>ソフトドリンク</span><span class="price">¥400</span></li>
+          <li><span>山芋バタポンステーキ</span><span class="price">¥580</span></li>
+          <li><span>焼き枝豆</span><span class="price">¥480</span></li>
+          <li><span>生姜焼</span><span class="price">¥880</span></li>
+          <li><span>びっくり亭のアレ</span><span class="price">¥880</span></li>
+          <li><span>せせりともやしの炒め</span><span class="price">¥780</span></li>
+          <li><span>豚キムチ</span><span class="price">¥880</span></li>
+          <li><span>鶏皮にんにく</span><span class="price">¥250</span></li>
+          <li><span>手羽先塩焼き</span><span class="price">¥280</span></li>
+          <li><span>トマトチーズ鉄板</span><span class="price">¥780</span></li>
+          <li><span>えのきバター</span><span class="price">¥480</span></li>
+          <li><span>ニラ玉鉄板</span><span class="price">¥380</span></li>
+        </ul>
+      </div>
+      <div class="menu-block">
+        <h3>揚げ物</h3>
+        <ul>
+          <li><span>いんかん</span><span class="price">¥380</span></li>
+          <li><span>だしコロッケ</span><span class="price">¥380</span></li>
+          <li><span>紅しょうが天</span><span class="price">¥380</span></li>
+          <li><span>じゃこ天</span><span class="price">¥380</span></li>
+          <li><span>揚げギョーザ</span><span class="price">¥680</span></li>
+          <li><span>揚げたこ焼き</span><span class="price">¥480</span></li>
+          <li><span>揚げだしナス</span><span class="price">¥580</span></li>
+          <li><span>揚げだし豆腐</span><span class="price">¥580</span></li>
+        </ul>
+      </div>
+      <div class="menu-block">
+        <h3>ちょい飲み・つまみ</h3>
+        <ul>
+          <li><span>らっきょ</span><span class="price">¥280</span></li>
+          <li><span>ニンニクみそきゅうり</span><span class="price">¥280</span></li>
+          <li><span>辛しょうが</span><span class="price">¥480</span></li>
+          <li><span>青とうあみづけ</span><span class="price">¥480</span></li>
+          <li><span>極太メンマ</span><span class="price">¥480</span></li>
+          <li><span>トマトスライス</span><span class="price">¥380</span></li>
+          <li><span>雲仙ハム</span><span class="price">¥680</span></li>
+          <li><span>生ハムゆず大根</span><span class="price">¥480</span></li>
+          <li><span>クリームチーズいぶりがっこ</span><span class="price">¥480</span></li>
+          <li><span>空心菜のアーリオオーリオ</span><span class="price">¥680</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="menu-h3">お酒</h3>
+    <div class="menu-regular cols-3">
+      <div class="menu-block">
+        <h3>ビール</h3>
+        <ul>
+          <li><span>カールスバーグ（グラス）</span><span class="price">¥600</span></li>
+          <li><span>サッポロ黒ラベル（中瓶）</span><span class="price">¥600</span></li>
+          <li><span>サッポロ赤星（中瓶）</span><span class="price">¥600</span></li>
+          <li><span>オールフリー（ノンアル）</span><span class="price">¥500</span></li>
+        </ul>
+      </div>
+      <div class="menu-block">
+        <h3>ハイボール</h3>
+        <ul>
+          <li><span>超炭酸 角ハイボール</span><span class="price">¥500</span></li>
+        </ul>
+      </div>
+      <div class="menu-block">
+        <h3>焼酎</h3>
+        <ul>
+          <li><span>黒霧島</span><span class="price">¥400</span></li>
+          <li><span>いいちこ</span><span class="price">¥400</span></li>
+          <li><span>白岳しろ</span><span class="price">¥400</span></li>
+        </ul>
+      </div>
+      <div class="menu-block">
+        <h3>サワー・果実酒</h3>
+        <ul>
+          <li><span>生レモンサワー</span><span class="price">¥600</span></li>
+          <li><span>男梅サワー</span><span class="price">¥600</span></li>
+          <li><span>ぶんご梅酒</span><span class="price">¥500</span></li>
+          <li><span>あらごしみかん</span><span class="price">¥500</span></li>
+          <li><span>ざくろとカシス</span><span class="price">¥500</span></li>
+        </ul>
+      </div>
+      <div class="menu-block">
+        <h3>ボトルワイン</h3>
+        <ul>
+          <li><span>ロルジュ リル シラー（赤）</span><span class="price">¥3,000</span></li>
+          <li><span>ロルジュ リル マルベック（赤）</span><span class="price">¥3,000</span></li>
+          <li><span>ロルジュ リル シャルドネ（白）</span><span class="price">¥3,000</span></li>
+          <li><span>ロルジュ リル ヴィオニエ（白）</span><span class="price">¥3,000</span></li>
+        </ul>
+      </div>
+      <div class="menu-block">
+        <h3>ソフトドリンク</h3>
+        <ul>
+          <li><span>ウーロン茶</span><span class="price">¥300</span></li>
+          <li><span>生茶</span><span class="price">¥300</span></li>
+          <li><span>コーラ</span><span class="price">¥300</span></li>
+          <li><span>ウィルキンソン（辛口）</span><span class="price">¥300</span></li>
+          <li><span>オレンジジュース</span><span class="price">¥300</span></li>
         </ul>
       </div>
     </div>
 
     <p class="menu-note">
-      ※ 上記は一例でございます。実際の品書き・価格はご来店時にご確認くださいませ。<br>
-      お客様一人ひとりに合わせて、お好きなように召し上がっていただける店でございます。
+      ※ 価格は変動する場合がございます。<br>
+      ※ 定番のほか、季節限定の日本酒・焼酎なども豊富にご用意しております。
     </p>
   </div>
 </section>
@@ -474,15 +586,15 @@ footer .copyright{font-size:11px;color:var(--c-mute);margin-top:32px;letter-spac
     <div class="sect-label">SPACE</div>
     <h2 class="sect-title">店のこと<small>Our Counter</small></h2>
     <div class="space-row">
-      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="路地裏のカウンター">
+      <img src="./assets/interior.jpg" alt="変幻自在 店内のL字カウンター 10席">
       <div class="space-text">
-        <p>路地を一本入った、看板の小さな店でございます。</p>
-        <p>暖簾をくぐると、カウンターと数席のテーブル、合わせて十席。店主の手元と、その日の食材が見える距離感です。</p>
-        <p>大声で盛り上がる店ではございません。ぽつぽつと会話し、お酒と料理をゆっくり楽しんでいただける、そんな空気を大切にしております。</p>
+        <p>暖簾をくぐると、L字のカウンターに <strong>10席</strong>。それだけの小さな店でございます。</p>
+        <p>店主の手元と、棚に並ぶ日本酒・焼酎の瓶、その日の食材が見える距離感。隣の方の会話が自然と耳に入る、けれど干渉しない、町場の居酒屋らしい間合いを大切にしております。</p>
+        <p>大声で盛り上がる場所ではございません。お酒と一品を、ゆっくりと味わっていただける店でございます。</p>
         <dl class="space-spec">
-          <dt>席数</dt><dd>カウンター中心 約10席</dd>
-          <dt>分煙</dt><dd>※実態確認後に記載</dd>
-          <dt>BGM</dt><dd>控えめにジャズ・和楽器</dd>
+          <dt>席数</dt><dd>L字カウンター 10席</dd>
+          <dt>客層</dt><dd>お一人様・2軒目利用が中心</dd>
+          <dt>BGM</dt><dd>控えめに</dd>
           <dt>服装</dt><dd>仕事帰りそのままで構いません</dd>
         </dl>
       </div>
