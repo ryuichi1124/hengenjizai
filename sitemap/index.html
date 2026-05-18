@@ -21,6 +21,7 @@
     var map = e.target.closest('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]');
     if (map && !map.closest('iframe')) {
       gtag('event', 'map_click', { link_url: map.getAttribute('href'), page_path: location.pathname });
+      gtag('event', 'generate_lead', { currency: 'JPY', value: 1, method: 'map' });
     }
   });
 </script>
