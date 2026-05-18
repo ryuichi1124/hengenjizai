@@ -41,13 +41,16 @@
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
+  "@id": "https://hengenjizai-hakata.com/#restaurant",
   "name": "変幻自在",
-  "alternateName": "ヘンゲンジザイ",
-  "description": "博多駅筑紫口から徒歩約10分、博多駅南にあるカウンター十席の居酒屋。天然タイの昆布〆、アジのなめろうなど博多らしい肴と、日本酒・焼酎・ワインを取り揃えております。",
+  "alternateName": ["ヘンゲンジザイ","Hengenjizai"],
+  "description": "博多駅・筑紫口より徒歩約10分。L字カウンター10席だけの小さな居酒屋。天然タイの昆布〆、アジのなめろうなど博多らしい肴と、日本酒・焼酎・ボトルワインを取り揃えております。コース料理はなく、その日のおすすめと定番一品料理を、店主一人で切り盛りしております。",
+  "slogan": "博多駅・筑紫口より徒歩約十分。旬の魚と、肴と、お酒を。カウンター十席でお待ちしております。",
   "image": [
     "https://hengenjizai-hakata.com/assets/exterior.jpg",
     "https://hengenjizai-hakata.com/assets/interior.jpg"
   ],
+  "logo": "https://hengenjizai-hakata.com/assets/logo.svg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "博多駅南3丁目9-21 102",
@@ -57,19 +60,156 @@
     "addressCountry": "JP"
   },
   "geo": {"@type":"GeoCoordinates","latitude":33.58189,"longitude":130.42303},
+  "hasMap": "https://maps.app.goo.gl/iHLLd2m7xEdmFTqz5",
   "smokingAllowed": true,
   "maximumAttendeeCapacity": 10,
   "url": "https://hengenjizai-hakata.com/",
   "telephone": "+81-92-402-8110",
-  "servesCuisine": ["Japanese","Izakaya"],
-  "priceRange": "¥3,000〜¥4,000",
-  "acceptsReservations": "True",
+  "servesCuisine": ["Japanese","Izakaya","Creative"],
+  "priceRange": "¥¥",
+  "currenciesAccepted": "JPY",
+  "paymentAccepted": ["Cash","Credit Card","QR Code"],
+  "acceptsReservations": true,
+  "publicAccess": true,
+  "isAccessibleForFree": false,
+  "knowsLanguage": ["ja"],
+  "amenityFeature": [
+    {"@type":"LocationFeatureSpecification","name":"カウンター席","value":true},
+    {"@type":"LocationFeatureSpecification","name":"喫煙可","value":true},
+    {"@type":"LocationFeatureSpecification","name":"クレジットカード可","value":true},
+    {"@type":"LocationFeatureSpecification","name":"QR決済可","value":true},
+    {"@type":"LocationFeatureSpecification","name":"お一人様歓迎","value":true},
+    {"@type":"LocationFeatureSpecification","name":"個室","value":false},
+    {"@type":"LocationFeatureSpecification","name":"駐車場","value":false},
+    {"@type":"LocationFeatureSpecification","name":"コース料理","value":false},
+    {"@type":"LocationFeatureSpecification","name":"お子様連れ","value":false}
+  ],
   "openingHoursSpecification": [{
     "@type":"OpeningHoursSpecification",
     "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
     "opens":"18:00","closes":"23:30"
   }],
-  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"6","bestRating":"5","worstRating":"1"}
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"6","bestRating":"5","worstRating":"1"},
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "変幻自在のお品書き",
+    "description": "その日の仕入れと店主の気分で変わる、定番一品料理と本日のおすすめ。コース料理はございません。",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "刺身・肴",
+        "hasMenuItem": [
+          {"@type":"MenuItem","name":"天然タイの昆布〆","offers":{"@type":"Offer","price":"990","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"アジのなめろう","offers":{"@type":"Offer","price":"880","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"〆サバ","offers":{"@type":"Offer","price":"580","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"板わさ","offers":{"@type":"Offer","price":"380","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"ガツシンぽん酢","offers":{"@type":"Offer","price":"580","priceCurrency":"JPY"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "焼き・鉄板",
+        "hasMenuItem": [
+          {"@type":"MenuItem","name":"山芋バタポンステーキ","offers":{"@type":"Offer","price":"580","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"生姜焼","offers":{"@type":"Offer","price":"880","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"びっくり亭のアレ","offers":{"@type":"Offer","price":"880","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"せせりともやしの炒め","offers":{"@type":"Offer","price":"780","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"豚キムチ","offers":{"@type":"Offer","price":"880","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"鶏皮にんにく","offers":{"@type":"Offer","price":"250","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"手羽先塩焼き","offers":{"@type":"Offer","price":"280","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"トマトチーズ鉄板","offers":{"@type":"Offer","price":"780","priceCurrency":"JPY"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "揚げ物",
+        "hasMenuItem": [
+          {"@type":"MenuItem","name":"ハムカツ","offers":{"@type":"Offer","price":"380","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"だしコロッケ","offers":{"@type":"Offer","price":"380","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"揚げギョーザ","offers":{"@type":"Offer","price":"680","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"揚げだしナス","offers":{"@type":"Offer","price":"580","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"揚げだし豆腐","offers":{"@type":"Offer","price":"580","priceCurrency":"JPY"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "ちょい飲み・つまみ",
+        "hasMenuItem": [
+          {"@type":"MenuItem","name":"クリームチーズいぶりがっこ","offers":{"@type":"Offer","price":"480","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"空心菜のアーリオオーリオ","offers":{"@type":"Offer","price":"680","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"雲仙ハム","offers":{"@type":"Offer","price":"680","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"生ハムゆず大根","offers":{"@type":"Offer","price":"480","priceCurrency":"JPY"}}
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "お飲み物",
+        "hasMenuItem": [
+          {"@type":"MenuItem","name":"生ビール（カールスバーグ）","offers":{"@type":"Offer","price":"600","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"超炭酸 角ハイボール","offers":{"@type":"Offer","price":"500","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"焼酎（黒霧島・いいちこ・白岳しろ）","offers":{"@type":"Offer","price":"400","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"生レモンサワー","offers":{"@type":"Offer","price":"600","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"ぶんご梅酒","offers":{"@type":"Offer","price":"500","priceCurrency":"JPY"}},
+          {"@type":"MenuItem","name":"ボトルワイン（ロルジュ リル）","offers":{"@type":"Offer","price":"3000","priceCurrency":"JPY"}}
+        ]
+      }
+    ]
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".hero h1",".hero .lead",".about p"]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://hengenjizai-hakata.com/#organization",
+  "name": "変幻自在",
+  "alternateName": "Hengenjizai",
+  "url": "https://hengenjizai-hakata.com/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://hengenjizai-hakata.com/assets/logo.svg",
+    "contentUrl": "https://hengenjizai-hakata.com/assets/logo.svg"
+  },
+  "image": "https://hengenjizai-hakata.com/assets/exterior.jpg",
+  "telephone": "+81-92-402-8110",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "博多駅南3丁目9-21 102",
+    "addressLocality": "福岡市博多区",
+    "addressRegion": "福岡県",
+    "postalCode": "812-0016",
+    "addressCountry": "JP"
+  },
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "telephone": "+81-92-402-8110",
+    "contactType": "reservations",
+    "areaServed": "JP",
+    "availableLanguage": ["Japanese"],
+    "hoursAvailable": {
+      "@type": "OpeningHoursSpecification",
+      "opens": "15:00",
+      "closes": "22:00"
+    }
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://hengenjizai-hakata.com/#website",
+  "name": "変幻自在｜博多駅・筑紫口の居酒屋",
+  "alternateName": "Hengenjizai",
+  "url": "https://hengenjizai-hakata.com/",
+  "inLanguage": "ja-JP",
+  "publisher": {"@id": "https://hengenjizai-hakata.com/#organization"},
+  "about": {"@id": "https://hengenjizai-hakata.com/#restaurant"},
+  "description": "博多駅・筑紫口より徒歩約10分。L字カウンター10席の居酒屋「変幻自在」公式サイト。"
 }
 </script>
 <script>
