@@ -249,6 +249,42 @@ section{padding:96px 0;border-top:1px dashed var(--c-line)}
   .price-summary .price{font-size:16px}
 }
 
+/* Dishes Marquee */
+.dishes-marquee{
+  overflow:hidden;
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  margin-top:32px;margin-bottom:40px;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);
+}
+.dishes-track{
+  display:flex;
+  width:max-content;
+  gap:16px;
+  animation:dishes-scroll 60s linear infinite;
+}
+.dishes-marquee:hover .dishes-track{animation-play-state:paused}
+.dishes-track img{
+  height:220px;width:auto;display:block;
+  flex-shrink:0;
+  border-radius:10px;
+  object-fit:cover;
+  box-shadow:0 4px 16px rgba(0,0,0,.08);
+}
+@media(max-width:600px){
+  .dishes-track img{height:132px;border-radius:8px}
+  .dishes-track{gap:10px;animation-duration:45s}
+}
+@keyframes dishes-scroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+@media(prefers-reduced-motion:reduce){
+  .dishes-track{animation:none}
+}
+
 /* Menu board image */
 .menu-board-img{
   max-width:560px;width:100%;margin:24px auto 48px;
