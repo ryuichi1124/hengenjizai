@@ -63,7 +63,7 @@
   "@id": "https://hengenjizai-hakata.com/#restaurant",
   "name": "変幻自在",
   "alternateName": ["ヘンゲンジザイ","Hengenjizai"],
-  "description": "博多駅・筑紫口より徒歩約10分の居酒屋。四季折々の旬の食材を使ったお料理と、日本酒・焼酎・ボトルワインなど豊富なお酒、酒の肴を取り揃えております。カウンター10席、コース料理はなく、その日のおすすめと定番一品料理をお楽しみいただけます。",
+  "description": "博多駅・筑紫口より徒歩約10分の居酒屋。四季折々の旬の食材を中心としたお料理と、日本酒・焼酎・ボトルワインなど豊富なお酒、酒の肴を取り揃えております。カウンター10席、コース料理はなく、定番の一品料理と店内のおすすめをお楽しみいただけます。",
   "slogan": "博多駅・筑紫口より徒歩約十分。四季折々の旬のお料理と、豊富なお酒、酒の肴を。カウンター十席でお待ちしております。",
   "image": [
     "https://hengenjizai-hakata.com/assets/exterior.jpg",
@@ -100,19 +100,18 @@
     {"@type":"LocationFeatureSpecification","name":"お一人様歓迎","value":true},
     {"@type":"LocationFeatureSpecification","name":"個室","value":false},
     {"@type":"LocationFeatureSpecification","name":"駐車場","value":false},
-    {"@type":"LocationFeatureSpecification","name":"コース料理","value":false},
-    {"@type":"LocationFeatureSpecification","name":"お子様連れ","value":false}
+    {"@type":"LocationFeatureSpecification","name":"コース料理","value":false}
   ],
   "openingHoursSpecification": [{
     "@type":"OpeningHoursSpecification",
     "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-    "opens":"18:00","closes":"23:30"
+    "opens":"18:00","closes":"00:00"
   }],
   "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"6","bestRating":"5","worstRating":"1"},
   "hasMenu": {
     "@type": "Menu",
     "name": "変幻自在のお品書き",
-    "description": "その日の仕入れと店主の気分で変わる、定番一品料理と本日のおすすめ。コース料理はございません。",
+    "description": "定番の一品料理と、店内のおすすめのお品書き。コース料理はございません。",
     "hasMenuSection": [
       {
         "@type": "MenuSection",
@@ -208,12 +207,7 @@
     "telephone": "+81-92-402-8110",
     "contactType": "reservations",
     "areaServed": "JP",
-    "availableLanguage": ["Japanese"],
-    "hoursAvailable": {
-      "@type": "OpeningHoursSpecification",
-      "opens": "15:00",
-      "closes": "22:00"
-    }
+    "availableLanguage": ["Japanese"]
   }]
 }
 </script>
@@ -298,7 +292,7 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
 
     <div class="menu-notice">
       <p>本日のおすすめは、店内のボードにてご案内しております。</p>
-      <p class="sub">その日の市場と店主の気分で、変幻自在に。</p>
+      <p class="sub">四季折々のお品書きで、変幻自在に。</p>
     </div>
 
     <div class="dishes-marquee" aria-label="お料理のイメージ">
@@ -459,7 +453,7 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
         <p>店主の手元と、棚に並ぶ日本酒・焼酎の瓶、その日の食材が見える距離感。賑わいのある夜も、お一人でゆっくり過ごす夜も、それぞれの心地良さでお過ごしいただけます。</p>
         <dl class="space-spec">
           <dt>席数</dt><dd>カウンター 10席</dd>
-          <dt>営業</dt><dd>18:00 〜 23:30</dd>
+          <dt>営業</dt><dd>18:00 〜 0:00</dd>
           <dt>雰囲気</dt><dd>適度な賑わい・お一人様も気兼ねなく</dd>
           <dt>喫煙</dt><dd>可（分煙ではございません）</dd>
           <dt>支払</dt><dd>現金・クレジットカード・QR決済</dd>
@@ -488,7 +482,7 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
       </div>
       <div class="voice">
         <div class="stars" aria-label="評価 5"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></div>
-        <p>「日替わりが本当に変幻自在で、来るたびに違う一皿を楽しめます。気取らないけれど、料理に手を抜かない、いい店だと思います。」</p>
+        <p>「お品書きが本当に変幻自在で、来るたびに違う一皿を楽しめます。気取らないけれど、料理に手を抜かない、いい店だと思います。」</p>
         <div class="who">— カウンターの常連様</div>
       </div>
     </div>
@@ -508,7 +502,7 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
         <dl>
           <dt>住所</dt><dd>〒812-0016<br>福岡県福岡市博多区<br>博多駅南3丁目9-21 102</dd>
           <dt>電話</dt><dd><a href="tel:0924028110">092-402-8110</a></dd>
-          <dt>営業</dt><dd>18:00 〜 23:30</dd>
+          <dt>営業</dt><dd>18:00 〜 0:00</dd>
           <dt>最寄駅</dt><dd>JR・地下鉄「博多駅」筑紫口より徒歩約10分</dd>
         </dl>
         <div class="section-cta" style="text-align:left;margin-top:24px">
@@ -528,7 +522,7 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
     <div class="sect-label">ABOUT</div>
     <h2 class="sect-title">お店について<small>Our Story</small></h2>
     <p>博多駅・筑紫口から徒歩で約十分。博多駅南の通りから一本入った場所に、暖簾を掲げております。</p>
-    <p>カウンター十席、落ち着いて賑やかな雰囲気の店でございます。お品書きは、四季折々の旬の食材を使い、その日の市場で仕入れたものから組み立てております。</p>
+    <p>カウンター十席、落ち着いて賑やかな雰囲気の店でございます。お品書きは、四季折々の旬の食材を中心にご用意しております。</p>
     <p>天然タイの昆布〆、アジのなめろう、ガツシンのぽん酢。博多らしい肴と、日本酒・焼酎・ワインまで取り揃えた豊富なお酒、酒の肴の数々を。</p>
     <p>賑やかな夜も、お一人でゆっくり過ごす夜も。ご縁あってお越しくださいましたお客様それぞれの時間を、お過ごしいただければと思っております。</p>
   </div>
@@ -544,7 +538,7 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
       ご予約をいただけますと確実にお席をご用意できます。
     </p>
     <a href="tel:0924028110" class="big-tel"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>092-402-8110</a>
-    <div class="tel-note">受付時間: 15:00 〜 22:00</div>
+    <div class="tel-note">お電話にてご予約を承っております</div>
     <p style="font-size:13px;color:var(--c-mute);line-height:2;font-family:var(--font-mincho)">
       ※ 苦手な食材・アレルギーは、ご予約時にお伝えくださいませ。
     </p>
@@ -558,7 +552,7 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
     <h2 class="sect-title">よくあるご質問<small>Q&amp;A</small></h2>
     <details><summary>予約は必要ですか？</summary><p>カウンター十席の店舗ですので、ご予約をいただけると確実です。空いていれば、ご予約なしでもご案内いたします。</p></details>
     <details><summary>お一人様でも入りやすいですか？</summary><p>カウンター中心の十席ですので、お一人でのご来店も多くいらっしゃいます。お気軽にお立ち寄りくださいませ。</p></details>
-    <details><summary>コース料理はありますか？</summary><p>コース料理のご用意はございません。その日のおすすめと、定番の品書きから、お好きにお選びいただけます。</p></details>
+    <details><summary>店内のおすすめはどこで確認できますか？</summary><p>店内のボードにてご案内しております。</p></details>
     <details><summary>タバコは吸えますか？</summary><p>店内は喫煙可能でございます。分煙ではございませんので、お煙草が苦手な方は事前にお問い合わせください。</p></details>
     <div class="section-cta">
       <a href="/faq/" class="btn">Q&amp;Aをすべて見る</a>
