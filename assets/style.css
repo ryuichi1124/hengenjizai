@@ -50,6 +50,18 @@ footer .logo-img{height:72px;margin:0 auto 4px;max-width:220px}
   --font-mincho:"Shippori Mincho","Noto Serif JP",serif;
   --font-gothic:"Noto Sans JP",system-ui,sans-serif;
   --font-hand:"Klee One","Yuji Mai","Shippori Mincho",cursive;
+  --font-shodo:"Yuji Mai","Shippori Mincho","Noto Serif JP",serif;
+}
+.font-shodo{font-family:var(--font-shodo) !important;letter-spacing:.18em}
+.hero h1.font-shodo{font-weight:400}
+header .logo-text.font-shodo{font-weight:400;letter-spacing:.14em}
+.footer-tagline{
+  font-family:var(--font-shodo);
+  font-size:13px;
+  color:var(--c-mute);
+  letter-spacing:.35em;
+  opacity:.7;
+  margin:8px 0 6px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
