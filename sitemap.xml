@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://hengenjizai-hakata.com/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hengenjizai-hakata.com/assets/exterior.jpg</image:loc>
+      <image:title>変幻自在 店舗外観（暖簾と赤提灯）</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://hengenjizai-hakata.com/assets/interior.jpg</image:loc>
+      <image:title>変幻自在 店内カウンター10席</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hengenjizai-hakata.com/menu/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://hengenjizai-hakata.com/assets/dishes/sashimi-tai-sapporo.jpg</image:loc>
+      <image:title>天然タイのお造りとサッポロビール</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://hengenjizai-hakata.com/assets/dishes/sashimi-otoro.jpg</image:loc>
+      <image:title>中トロの角切り</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://hengenjizai-hakata.com/assets/dishes/oden-moriawase.jpg</image:loc>
+      <image:title>おでん盛り合わせ</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://hengenjizai-hakata.com/assets/dishes/saba-shioyaki.jpg</image:loc>
+      <image:title>焼き鯖</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://hengenjizai-hakata.com/assets/dishes/gyu-tataki-sansho.jpg</image:loc>
+      <image:title>牛のたたきと山椒の葉</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://hengenjizai-hakata.com/voice/</loc>
@@ -26,7 +61,7 @@
   </url>
   <url>
     <loc>https://hengenjizai-hakata.com/sitemap/</loc>
-    <lastmod>2026-05-18</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>

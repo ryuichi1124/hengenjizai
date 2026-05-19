@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1P9MWLDR5L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1P9MWLDR5L');
+  document.addEventListener('click', function(e){
+    var tel = e.target.closest('a[href^="tel:"]');
+    if (tel) {
+      var phone = tel.getAttribute('href').replace('tel:','').replace(/[^0-9]/g,'');
+      gtag('event', 'phone_click', { phone_number: phone, page_path: location.pathname, link_text: tel.textContent.trim() });
+      gtag('event', 'generate_lead', { currency: 'JPY', value: 1, method: 'phone' });
+      return;
+    }
+    var map = e.target.closest('a[href*="maps.app.goo.gl"], a[href*="google.com/maps"]');
+    if (map && !map.closest('iframe')) {
+      gtag('event', 'map_click', { link_url: map.getAttribute('href'), page_path: location.pathname });
+      gtag('event', 'generate_lead', { currency: 'JPY', value: 1, method: 'map' });
+    }
+  });
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>お品書き｜変幻自在｜博多駅・筑紫口の居酒屋</title>
+<meta name="description" content="変幻自在のお品書き。刺身・焼き物・揚げ物・つまみと、ビール・ハイボール・焼酎・サワー・ボトルワインまで。カウンター10席で四季折々の旬の食材を中心にご用意しております。博多駅・筑紫口より徒歩約10分。">
+<meta name="keywords" content="変幻自在,お品書き,メニュー,博多 居酒屋 メニュー,博多駅南 居酒屋,博多 筑紫口 居酒屋,価格">
+<link rel="canonical" href="https://hengenjizai-hakata.com/menu/">
+<link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+<link rel="apple-touch-icon" href="/assets/logo.svg">
+<meta name="theme-color" content="#fbf8f3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="お品書き｜変幻自在｜博多駅・筑紫口の居酒屋">
+<meta property="og:description" content="変幻自在のお品書きと、お客様が送ってくださったお料理のギャラリー。四季折々の旬の食材を中心に、刺身・焼き物・揚げ物・つまみ・お酒を取り揃えております。">
+<meta property="og:url" content="https://hengenjizai-hakata.com/menu/">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="変幻自在">
+<meta property="og:image" content="https://hengenjizai-hakata.com/assets/dishes/sashimi-tai-sapporo.jpg">
+<meta property="og:image:secure_url" content="https://hengenjizai-hakata.com/assets/dishes/sashimi-tai-sapporo.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="変幻自在 天然タイのお造りとサッポロビール">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="お品書き｜変幻自在">
+<meta name="twitter:description" content="変幻自在のお品書きと、お客様が撮ってくださったお料理ギャラリー。">
+<meta name="twitter:image" content="https://hengenjizai-hakata.com/assets/dishes/sashimi-tai-sapporo.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/style.css?v=20260519a">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "@id": "https://hengenjizai-hakata.com/menu/#menu",
+  "name": "変幻自在のお品書き",
+  "url": "https://hengenjizai-hakata.com/menu/",
+  "description": "定番の一品料理と、店内のおすすめのお品書き。刺身・焼き物・揚げ物・つまみと、ビール・ハイボール・焼酎・サワー・果実酒・ボトルワインまで。",
+  "inLanguage": "ja-JP",
+  "provider": {"@id": "https://hengenjizai-hakata.com/#restaurant"},
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "刺身・肴",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"天然タイの昆布〆","offers":{"@type":"Offer","price":"990","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"アジのなめろう","offers":{"@type":"Offer","price":"880","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"〆サバ","offers":{"@type":"Offer","price":"580","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"板わさ","offers":{"@type":"Offer","price":"380","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"ガツシンぽん酢","offers":{"@type":"Offer","price":"580","priceCurrency":"JPY"}}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "焼き・鉄板",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"山芋バタポンステーキ","offers":{"@type":"Offer","price":"580","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"焼き枝豆","offers":{"@type":"Offer","price":"480","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"生姜焼","offers":{"@type":"Offer","price":"880","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"びっくり亭のアレ","offers":{"@type":"Offer","price":"880","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"せせりともやしの炒め","offers":{"@type":"Offer","price":"780","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"豚キムチ","offers":{"@type":"Offer","price":"880","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"鶏皮にんにく","offers":{"@type":"Offer","price":"250","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"手羽先塩焼き","offers":{"@type":"Offer","price":"280","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"トマトチーズ鉄板","offers":{"@type":"Offer","price":"780","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"えのきバター","offers":{"@type":"Offer","price":"480","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"ニラ玉鉄板","offers":{"@type":"Offer","price":"380","priceCurrency":"JPY"}}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "揚げ物",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"ハムカツ","offers":{"@type":"Offer","price":"380","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"だしコロッケ","offers":{"@type":"Offer","price":"380","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"紅しょうが天","offers":{"@type":"Offer","price":"380","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"じゃこ天","offers":{"@type":"Offer","price":"380","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"揚げギョーザ","offers":{"@type":"Offer","price":"680","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"揚げたこ焼き","offers":{"@type":"Offer","price":"480","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"揚げだしナス","offers":{"@type":"Offer","price":"580","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"揚げだし豆腐","offers":{"@type":"Offer","price":"580","priceCurrency":"JPY"}}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "ちょい飲み・つまみ",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"らっきょ","offers":{"@type":"Offer","price":"280","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"ニンニクみそきゅうり","offers":{"@type":"Offer","price":"280","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"芽しょうが","offers":{"@type":"Offer","price":"480","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"青とうあみづけ","offers":{"@type":"Offer","price":"480","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"極太メンマ","offers":{"@type":"Offer","price":"480","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"トマトスライス","offers":{"@type":"Offer","price":"380","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"雲仙ハム","offers":{"@type":"Offer","price":"680","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"生ハムゆず大根","offers":{"@type":"Offer","price":"480","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"クリームチーズいぶりがっこ","offers":{"@type":"Offer","price":"480","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"空心菜のアーリオオーリオ","offers":{"@type":"Offer","price":"680","priceCurrency":"JPY"}}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "ビール",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"カールスバーグ（グラス）","offers":{"@type":"Offer","price":"600","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"サッポロ黒ラベル（中瓶）","offers":{"@type":"Offer","price":"600","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"サッポロ赤星（中瓶）","offers":{"@type":"Offer","price":"600","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"オールフリー（ノンアル）","offers":{"@type":"Offer","price":"500","priceCurrency":"JPY"}}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "ハイボール・焼酎",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"超炭酸 角ハイボール","offers":{"@type":"Offer","price":"500","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"黒霧島","offers":{"@type":"Offer","price":"400","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"いいちこ","offers":{"@type":"Offer","price":"400","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"白岳しろ","offers":{"@type":"Offer","price":"400","priceCurrency":"JPY"}}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "サワー・果実酒",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"生レモンサワー","offers":{"@type":"Offer","price":"600","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"男梅サワー","offers":{"@type":"Offer","price":"600","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"ぶんご梅酒","offers":{"@type":"Offer","price":"500","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"あらごしみかん","offers":{"@type":"Offer","price":"500","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"ざくろとカシス","offers":{"@type":"Offer","price":"500","priceCurrency":"JPY"}}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "ボトルワイン",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"ロルジュ リル シラー（赤）","offers":{"@type":"Offer","price":"3000","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"ロルジュ リル マルベック（赤）","offers":{"@type":"Offer","price":"3000","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"ロルジュ リル シャルドネ（白）","offers":{"@type":"Offer","price":"3000","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"ロルジュ リル ヴィオニエ（白）","offers":{"@type":"Offer","price":"3000","priceCurrency":"JPY"}}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "ソフトドリンク",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"ウーロン茶","offers":{"@type":"Offer","price":"300","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"生茶","offers":{"@type":"Offer","price":"300","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"コーラ","offers":{"@type":"Offer","price":"300","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"ウィルキンソン（辛口）","offers":{"@type":"Offer","price":"300","priceCurrency":"JPY"}},
+        {"@type":"MenuItem","name":"オレンジジュース","offers":{"@type":"Offer","price":"300","priceCurrency":"JPY"}}
+      ]
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"ホーム","item":"https://hengenjizai-hakata.com/"},
+    {"@type":"ListItem","position":2,"name":"お品書き","item":"https://hengenjizai-hakata.com/menu/"}
+  ]
+}
+</script>
+<script>
+if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add('no-loader')}
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.5 15.5 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24c1.16.39 2.4.6 3.67.6a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.27.21 2.51.6 3.67a1 1 0 0 1-.24 1.05l-2.24 2.07z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h2v2H3V5zm4 0h14v2H7V5zM3 11h2v2H3v-2zm4 0h14v2H7v-2zM3 17h2v2H3v-2zm4 0h14v2H7v-2z"/></symbol>
+</svg>
+
+<header>
+  <div class="row">
+    <a href="/" class="logo" aria-label="変幻自在 トップへ"><img src="/assets/logo.svg" alt="" class="logo-img" aria-hidden="true"><span class="logo-text">変幻自在</span></a>
+    <nav>
+      <a href="/menu/" aria-current="page">お品書き</a>
+      <a href="/voice/">お客様の声</a>
+      <a href="/access/">アクセス</a>
+      <a href="/#about">お店について</a>
+      <a href="/faq/">Q&amp;A</a>
+    </nav>
+    <a href="tel:0924028110" class="tel-mini"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>092-402-8110</a>
+  </div>
+</header>
+
+<nav class="breadcrumb" aria-label="パンくず">
+  <ol>
+    <li><a href="/">ホーム</a></li>
+    <li aria-current="page">お品書き</li>
+  </ol>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="sub">MENU</div>
+    <h1>お品書き</h1>
+    <p>定番の一品料理と、店内のおすすめ。<br>四季折々の旬の食材を中心にご用意しております。</p>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+
+    <div class="price-summary" aria-label="主な価格">
+      <ul>
+        <li><span class="cat">ビール</span><span class="price">¥600</span></li>
+        <li><span class="cat">ハイボール</span><span class="price">¥500</span></li>
+        <li><span class="cat">焼酎</span><span class="price">¥400〜</span></li>
+        <li><span class="cat">サワー・果実酒</span><span class="price">¥500〜</span></li>
+      </ul>
+    </div>
+
+    <div class="menu-notice">
+      <p>本日のおすすめは、店内のボードにてご案内しております。</p>
+      <p class="sub">四季折々のお品書きで、変幻自在に。</p>
+    </div>
+
+    <h2 class="menu-h3">お料理</h2>
+    <div class="menu-acc-group">
+      <details class="menu-acc" open>
+        <summary>刺身・肴</summary>
+        <ul>
+          <li><span>天然タイの昆布〆</span><span class="price">¥990</span></li>
+          <li><span>アジのなめろう</span><span class="price">¥880</span></li>
+          <li><span>〆サバ</span><span class="price">¥580</span></li>
+          <li><span>板わさ</span><span class="price">¥380</span></li>
+          <li><span>ガツシンぽん酢</span><span class="price">¥580</span></li>
+        </ul>
+      </details>
+      <details class="menu-acc">
+        <summary>焼き・鉄板</summary>
+        <ul>
+          <li><span>山芋バタポンステーキ</span><span class="price">¥580</span></li>
+          <li><span>焼き枝豆</span><span class="price">¥480</span></li>
+          <li><span>生姜焼</span><span class="price">¥880</span></li>
+          <li><span>びっくり亭のアレ</span><span class="price">¥880</span></li>
+          <li><span>せせりともやしの炒め</span><span class="price">¥780</span></li>
+          <li><span>豚キムチ</span><span class="price">¥880</span></li>
+          <li><span>鶏皮にんにく</span><span class="price">¥250</span></li>
+          <li><span>手羽先塩焼き</span><span class="price">¥280</span></li>
+          <li><span>トマトチーズ鉄板</span><span class="price">¥780</span></li>
+          <li><span>えのきバター</span><span class="price">¥480</span></li>
+          <li><span>ニラ玉鉄板</span><span class="price">¥380</span></li>
+        </ul>
+      </details>
+      <details class="menu-acc">
+        <summary>揚げ物</summary>
+        <ul>
+          <li><span>ハムカツ</span><span class="price">¥380</span></li>
+          <li><span>だしコロッケ</span><span class="price">¥380</span></li>
+          <li><span>紅しょうが天</span><span class="price">¥380</span></li>
+          <li><span>じゃこ天</span><span class="price">¥380</span></li>
+          <li><span>揚げギョーザ</span><span class="price">¥680</span></li>
+          <li><span>揚げたこ焼き</span><span class="price">¥480</span></li>
+          <li><span>揚げだしナス</span><span class="price">¥580</span></li>
+          <li><span>揚げだし豆腐</span><span class="price">¥580</span></li>
+        </ul>
+      </details>
+      <details class="menu-acc">
+        <summary>ちょい飲み・つまみ</summary>
+        <ul>
+          <li><span>らっきょ</span><span class="price">¥280</span></li>
+          <li><span>ニンニクみそきゅうり</span><span class="price">¥280</span></li>
+          <li><span>芽しょうが</span><span class="price">¥480</span></li>
+          <li><span>青とうあみづけ</span><span class="price">¥480</span></li>
+          <li><span>極太メンマ</span><span class="price">¥480</span></li>
+          <li><span>トマトスライス</span><span class="price">¥380</span></li>
+          <li><span>雲仙ハム</span><span class="price">¥680</span></li>
+          <li><span>生ハムゆず大根</span><span class="price">¥480</span></li>
+          <li><span>クリームチーズいぶりがっこ</span><span class="price">¥480</span></li>
+          <li><span>空心菜のアーリオオーリオ</span><span class="price">¥680</span></li>
+        </ul>
+      </details>
+    </div>
+
+    <h2 class="menu-h3">お酒</h2>
+    <div class="menu-acc-group">
+      <details class="menu-acc">
+        <summary>ビール</summary>
+        <ul>
+          <li><span>カールスバーグ（グラス）</span><span class="price">¥600</span></li>
+          <li><span>サッポロ黒ラベル（中瓶）</span><span class="price">¥600</span></li>
+          <li><span>サッポロ赤星（中瓶）</span><span class="price">¥600</span></li>
+          <li><span>オールフリー（ノンアル）</span><span class="price">¥500</span></li>
+        </ul>
+      </details>
+      <details class="menu-acc">
+        <summary>ハイボール</summary>
+        <ul>
+          <li><span>超炭酸 角ハイボール</span><span class="price">¥500</span></li>
+        </ul>
+      </details>
+      <details class="menu-acc">
+        <summary>焼酎</summary>
+        <ul>
+          <li><span>黒霧島</span><span class="price">¥400</span></li>
+          <li><span>いいちこ</span><span class="price">¥400</span></li>
+          <li><span>白岳しろ</span><span class="price">¥400</span></li>
+        </ul>
+      </details>
+      <details class="menu-acc">
+        <summary>サワー・果実酒</summary>
+        <ul>
+          <li><span>生レモンサワー</span><span class="price">¥600</span></li>
+          <li><span>男梅サワー</span><span class="price">¥600</span></li>
+          <li><span>ぶんご梅酒</span><span class="price">¥500</span></li>
+          <li><span>あらごしみかん</span><span class="price">¥500</span></li>
+          <li><span>ざくろとカシス</span><span class="price">¥500</span></li>
+        </ul>
+      </details>
+      <details class="menu-acc">
+        <summary>ボトルワイン</summary>
+        <ul>
+          <li><span>ロルジュ リル シラー（赤）</span><span class="price">¥3,000</span></li>
+          <li><span>ロルジュ リル マルベック（赤）</span><span class="price">¥3,000</span></li>
+          <li><span>ロルジュ リル シャルドネ（白）</span><span class="price">¥3,000</span></li>
+          <li><span>ロルジュ リル ヴィオニエ（白）</span><span class="price">¥3,000</span></li>
+        </ul>
+      </details>
+      <details class="menu-acc">
+        <summary>ソフトドリンク</summary>
+        <ul>
+          <li><span>ウーロン茶</span><span class="price">¥300</span></li>
+          <li><span>生茶</span><span class="price">¥300</span></li>
+          <li><span>コーラ</span><span class="price">¥300</span></li>
+          <li><span>ウィルキンソン（辛口）</span><span class="price">¥300</span></li>
+          <li><span>オレンジジュース</span><span class="price">¥300</span></li>
+        </ul>
+      </details>
+    </div>
+
+    <p class="menu-note">
+      ※ 価格は変動する場合がございます。<br>
+      ※ 定番のほか、季節限定の日本酒・焼酎なども取り揃えております。
+    </p>
+
+    <!-- Gallery -->
+    <section class="gallery" aria-labelledby="gallery-title">
+      <h2 class="menu-h3" id="gallery-title">ギャラリー</h2>
+      <div class="gallery-intro">
+        <span class="strong">お客様が送ってくださった、変幻自在のお料理の写真です。</span>
+        その日その日でお品書きは変わってまいりますが、お料理の雰囲気を感じていただけましたら幸いです。
+      </div>
+      <div class="gallery-grid">
+        <figure><picture><source srcset="/assets/dishes/sashimi-tai-sapporo.webp" type="image/webp"><img src="/assets/dishes/sashimi-tai-sapporo.jpg" alt="天然タイのお造りとサッポロビール" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/sashimi-otoro.webp" type="image/webp"><img src="/assets/dishes/sashimi-otoro.jpg" alt="中トロの角切り、しその葉添え" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/sashimi-moriawase.webp" type="image/webp"><img src="/assets/dishes/sashimi-moriawase.jpg" alt="お造り盛り合わせ" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/sashimi-tai-aori.webp" type="image/webp"><img src="/assets/dishes/sashimi-tai-aori.jpg" alt="鯛のお造りとハイボール" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/saba-shioyaki.webp" type="image/webp"><img src="/assets/dishes/saba-shioyaki.jpg" alt="焼き鯖（皮目を香ばしく）" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/himono-yaki.webp" type="image/webp"><img src="/assets/dishes/himono-yaki.jpg" alt="干物焼き" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/saba-misoni.webp" type="image/webp"><img src="/assets/dishes/saba-misoni.jpg" alt="鯖の味噌煮" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/karaage-chili.webp" type="image/webp"><img src="/assets/dishes/karaage-chili.jpg" alt="唐揚げと唐辛子・葱の炒め" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/tempura-sansai.webp" type="image/webp"><img src="/assets/dishes/tempura-sansai.jpg" alt="山菜の天ぷら、塩を添えて" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/minchi-katsu-ankake.webp" type="image/webp"><img src="/assets/dishes/minchi-katsu-ankake.jpg" alt="メンチカツの和風あんかけ" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/oden-moriawase.webp" type="image/webp"><img src="/assets/dishes/oden-moriawase.jpg" alt="おでん盛り合わせ" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/ika-satoimo.webp" type="image/webp"><img src="/assets/dishes/ika-satoimo.jpg" alt="イカと里芋の煮物" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/gyu-cabbage-teppan.webp" type="image/webp"><img src="/assets/dishes/gyu-cabbage-teppan.jpg" alt="牛肉とキャベツの鉄板炒め" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/pasta-bacon-nasu.webp" type="image/webp"><img src="/assets/dishes/pasta-bacon-nasu.jpg" alt="ベーコンと茄子のパスタ" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/gyu-tataki-negi.webp" type="image/webp"><img src="/assets/dishes/gyu-tataki-negi.jpg" alt="牛のたたき、葱を効かせて" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/gyu-tataki-sansho.webp" type="image/webp"><img src="/assets/dishes/gyu-tataki-sansho.jpg" alt="牛のたたきと山椒の葉" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/horenso-ohitashi.webp" type="image/webp"><img src="/assets/dishes/horenso-ohitashi.jpg" alt="ほうれん草のお浸し、鰹節を添えて" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/jabara-kyuri.webp" type="image/webp"><img src="/assets/dishes/jabara-kyuri.jpg" alt="蛇腹胡瓜の小鉢" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/caesar-salad.webp" type="image/webp"><img src="/assets/dishes/caesar-salad.jpg" alt="シーザーサラダ" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/rakkyo.webp" type="image/webp"><img src="/assets/dishes/rakkyo.jpg" alt="らっきょ" loading="lazy" decoding="async"></picture></figure>
+        <figure><picture><source srcset="/assets/dishes/tomato-cheese-yaki.webp" type="image/webp"><img src="/assets/dishes/tomato-cheese-yaki.jpg" alt="トマトチーズ鉄板焼き" loading="lazy" decoding="async"></picture></figure>
+      </div>
+      <p class="gallery-note">
+        ※ 写真はお越しくださったお客様にご提供いただいたものでございます。<br>
+        ※ お品書きは四季折々で変わってまいりますので、ご来店時にご案内をお確かめくださいませ。
+      </p>
+    </section>
+
+    <div class="section-cta" style="margin-top:48px">
+      <a href="tel:0924028110" class="btn btn-primary"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>ご予約 092-402-8110</a>
+      <a href="/access/" class="btn">アクセスを見る</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="logo"><img src="/assets/logo.svg" alt="変幻自在" class="logo-img"></div>
+  <p>博多駅南・筑紫口の居酒屋</p>
+  <p>〒812-0016 福岡県福岡市博多区博多駅南3-9-21 102 / TEL 092-402-8110</p>
+  <nav>
+    <a href="/">トップ</a>
+    <a href="/menu/">お品書き</a>
+    <a href="/voice/">お客様の声</a>
+    <a href="/access/">アクセス</a>
+    <a href="/faq/">Q&amp;A</a>
+    <a href="/sitemap/">サイトマップ</a>
+  </nav>
+  <div class="copyright">© 変幻自在 All Rights Reserved.</div>
+</footer>
+
+<nav class="mobile-cta" aria-label="モバイルCTA">
+  <a href="tel:0924028110" class="primary"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>電話する</a>
+  <a href="/menu/"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>品書き</a>
+  <a href="https://maps.app.goo.gl/iHLLd2m7xEdmFTqz5" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>地図</a>
+</nav>
+
+<script>
+sessionStorage.setItem('hjz_loaded','1');
+</script>
+
+</body>
+</html>
