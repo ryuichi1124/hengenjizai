@@ -289,16 +289,11 @@ section{padding:96px 0;border-top:1px dashed var(--c-line)}
     background:transparent;
     border:none;outline:none;
   }
-  .ai-ask > summary,
-  .ai-ask summary{
-    list-style:none !important;
-  }
-  .ai-ask summary::-webkit-details-marker{display:none !important}
-  .ai-ask summary::marker{content:"" !important;display:none !important;font-size:0 !important}
   /* サマリー（ボタン） */
   .ai-ask-summary{
-    list-style:none;
-    display:flex !important;align-items:center;justify-content:center;gap:12px;
+    appearance:none;-webkit-appearance:none;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    width:100%;
     cursor:pointer;
     background:#fff;
     color:var(--c-accent);
@@ -309,26 +304,30 @@ section{padding:96px 0;border-top:1px dashed var(--c-line)}
     border-radius:999px;
     box-shadow:0 6px 18px rgba(154,42,26,.10);
     transition:transform .15s, box-shadow .15s, background .15s;
-    text-align:center;
-    position:relative;
+    text-align:left;
     -webkit-tap-highlight-color:transparent;
   }
   .ai-ask-summary:active{
     transform:scale(.98);
     box-shadow:0 3px 10px rgba(154,42,26,.10);
   }
-  .ai-ask-sparkle{
-    font-size:16px;color:#e8a948;
-    animation:ai-sparkle 2.4s ease-in-out infinite;
-    transform-origin:center;
-    flex-shrink:0;
-  }
-  @keyframes ai-sparkle{
-    0%,100%{transform:scale(1) rotate(0deg);opacity:.9}
-    50%{transform:scale(1.18) rotate(15deg);opacity:1}
-  }
   .ai-ask-label{
+    flex:1;
     line-height:1.4;
+    text-align:center;
+  }
+  .ai-ask-icon{
+    width:20px;height:20px;flex-shrink:0;
+    display:inline-flex;align-items:center;justify-content:center;
+    color:var(--c-accent);
+  }
+  .ai-ask-icon svg{width:100%;height:100%;display:block}
+  .ai-ask-icon-v{
+    transform-origin:center;
+    transition:transform .25s ease;
+  }
+  .ai-ask-summary[aria-expanded="true"] .ai-ask-icon-v{
+    transform:scaleY(0);
   }
 
   /* ボディ */
