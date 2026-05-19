@@ -263,6 +263,49 @@ section{padding:96px 0;border-top:1px dashed var(--c-line)}
   .price-summary .price{font-size:22px}
 }
 
+/* Collage Marquee（横長カード・お客様とお料理の風景） */
+.collage-section{
+  padding:56px 0 32px;
+  background:linear-gradient(180deg, var(--c-bg) 0%, var(--c-bg2) 100%);
+}
+.collage-marquee{
+  overflow:hidden;
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 6%,#000 94%,transparent 100%);
+}
+.collage-track{
+  display:flex;
+  width:max-content;
+  gap:18px;
+  animation:collage-scroll 55s linear infinite;
+  will-change:transform;
+}
+.collage-marquee:hover .collage-track{animation-play-state:paused}
+.collage-card{display:block;flex-shrink:0}
+.collage-card img{
+  width:720px;
+  height:auto;
+  display:block;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  background:var(--c-bg2);
+}
+@media(max-width:600px){
+  .collage-section{padding:36px 0 16px}
+  .collage-track{gap:12px;animation-duration:42s}
+  .collage-card img{width:420px;border-radius:8px}
+}
+@keyframes collage-scroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+@media(prefers-reduced-motion:reduce){
+  .collage-track{animation:none;justify-content:flex-start;overflow-x:auto}
+}
+
 /* Dishes Marquee (smooth horizontal auto-scroll, portrait cards) */
 .dishes-marquee{
   overflow:hidden;
