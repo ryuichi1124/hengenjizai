@@ -63,6 +63,26 @@ header .logo-text.font-shodo{font-weight:400;letter-spacing:.14em}
   opacity:.7;
   margin:8px 0 6px;
 }
+.hero-shopkind{
+  font-family:var(--font-shodo);
+  font-size:clamp(15px, 3.6vw, 20px);
+  letter-spacing:.45em;
+  color:var(--c-mute);
+  margin:-4px 0 22px;
+  text-indent:.45em;
+  opacity:.85;
+  animation:hero-fade 1.2s cubic-bezier(.2,.7,.3,1) forwards;
+  animation-delay:1.7s;
+  opacity:0;
+}
+.hero-shopkind{opacity:0}
+@media(max-width:720px){
+  .hero-shopkind{
+    font-size:15px;
+    letter-spacing:.4em;
+    margin:-2px 0 18px;
+  }
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
