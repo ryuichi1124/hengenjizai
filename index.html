@@ -40,21 +40,21 @@
 <meta property="og:url" content="https://hengenjizai-hakata.com/">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="変幻自在">
-<meta property="og:image" content="https://hengenjizai-hakata.com/assets/exterior.jpg">
-<meta property="og:image:secure_url" content="https://hengenjizai-hakata.com/assets/exterior.jpg">
+<meta property="og:image" content="https://hengenjizai-hakata.com/assets/hero/hero-collage-01.jpg">
+<meta property="og:image:secure_url" content="https://hengenjizai-hakata.com/assets/hero/hero-collage-01.jpg">
 <meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1600">
-<meta property="og:image:height" content="1067">
-<meta property="og:image:alt" content="変幻自在 店舗外観｜暖簾と赤提灯（博多駅南）">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="変幻自在 店内のお客様とお料理（コラージュ）">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="変幻自在｜旬の肴と四季の料理・お酒も豊富">
 <meta name="twitter:description" content="博多駅・筑紫口より徒歩約10分の居酒屋。四季折々の旬のお料理と、豊富なお酒・酒の肴を取り揃えております。">
-<meta name="twitter:image" content="https://hengenjizai-hakata.com/assets/exterior.jpg">
-<meta name="twitter:image:alt" content="変幻自在 店舗外観｜暖簾と赤提灯（博多駅南）">
+<meta name="twitter:image" content="https://hengenjizai-hakata.com/assets/hero/hero-collage-01.jpg">
+<meta name="twitter:image:alt" content="変幻自在 店内のお客様とお料理（コラージュ）">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=20260519b">
+<link rel="stylesheet" href="/assets/style.css?v=20260519c">
 
 <script type="application/ld+json">
 {
@@ -66,6 +66,9 @@
   "description": "博多駅・筑紫口より徒歩約10分の居酒屋。四季折々の旬の食材を中心としたお料理と、日本酒・焼酎・ボトルワインなど豊富なお酒、酒の肴を取り揃えております。カウンター10席、コース料理はなく、定番の一品料理と店内のおすすめをお楽しみいただけます。",
   "slogan": "博多駅・筑紫口より徒歩約十分。四季折々の旬のお料理と、豊富なお酒、酒の肴を。カウンター十席でお待ちしております。",
   "image": [
+    "https://hengenjizai-hakata.com/assets/hero/hero-collage-01.jpg",
+    "https://hengenjizai-hakata.com/assets/hero/hero-collage-02.jpg",
+    "https://hengenjizai-hakata.com/assets/hero/hero-collage-03.jpg",
     "https://hengenjizai-hakata.com/assets/exterior.jpg",
     "https://hengenjizai-hakata.com/assets/interior.jpg",
     "https://hengenjizai-hakata.com/assets/dishes/sashimi-tai-sapporo.jpg",
@@ -265,7 +268,13 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
 
 <!-- Hero -->
 <section class="hero" id="hero">
-  <img class="hero-img" src="/assets/exterior.jpg" alt="変幻自在 外観（暖簾と赤提灯）" loading="eager" fetchpriority="high">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-bg hero-bg-1"></div>
+    <div class="hero-bg hero-bg-2"></div>
+    <div class="hero-bg hero-bg-3"></div>
+  </div>
+  <img class="hero-img" src="/assets/hero/hero-collage-01.jpg" alt="変幻自在 店内のお客様とお料理のコラージュ" loading="eager" fetchpriority="high">
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-content">
     <div class="sub">HAKATA · CHIKUSHIGUCHI</div>
     <h1>変幻自在</h1>
