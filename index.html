@@ -266,7 +266,10 @@ if(sessionStorage.getItem('hjz_loaded')){document.documentElement.classList.add(
 
 <!-- Hero -->
 <section class="hero" id="hero">
-  <img class="hero-img" src="/assets/exterior.jpg" alt="変幻自在 外観（暖簾と赤提灯）" loading="eager" fetchpriority="high">
+  <picture class="hero-picture">
+    <source media="(max-width: 720px)" srcset="/assets/hero/mobile-hero-poster.jpg?v=20260525">
+    <img class="hero-img" src="/assets/exterior.jpg" alt="変幻自在 外観（暖簾と赤提灯）" loading="eager" fetchpriority="high">
+  </picture>
   <div class="hero-content">
     <div class="sub">HAKATA · CHIKUSHIGUCHI</div>
     <h1 class="font-shodo">変幻自在</h1>

@@ -146,7 +146,7 @@ header .tel-mini .icon{width:14px;height:14px;margin-right:4px}
   position:relative;
   overflow:hidden;
 }
-.hero-img{display:none}
+.hero-picture,.hero-img{display:none}
 .hero-content{width:100%;position:relative;z-index:2}
 .hero .sub,.hero h1,.hero .lead,.hero .cta-row{opacity:0;animation:hero-fade 1.2s cubic-bezier(.2,.7,.3,1) forwards}
 .hero .sub{animation-delay:1.3s}
@@ -174,14 +174,15 @@ header .tel-mini .icon{width:14px;height:14px;margin-right:4px}
     overflow:visible;
   }
   .hero::before{display:none}
+  .hero-picture,
   .hero-img{
     display:block;
     width:100%;
-    aspect-ratio:4/3;
-    object-fit:cover;
     opacity:0;
     animation:hero-img-in-sp 1.4s ease-out .6s forwards;
   }
+  .hero-picture{line-height:0}
+  .hero-img{height:auto}
   @keyframes hero-img-in-sp{from{opacity:0}to{opacity:1}}
   .hero-content{padding:36px 24px 0}
   .hero h1{text-shadow:none;margin-top:0}
