@@ -166,7 +166,9 @@ header .tel-mini .icon{width:14px;height:14px;margin-right:4px}
 
 @media(max-width:720px){
   .hero{
-    min-height:auto;
+    min-height:0;
+    height:auto;
+    max-height:none;
     background:none !important;
     display:block;
     padding:80px 0 40px;
@@ -178,11 +180,18 @@ header .tel-mini .icon{width:14px;height:14px;margin-right:4px}
   .hero-img{
     display:block;
     width:100%;
+    max-width:none;
+    max-height:none;
+  }
+  .hero-picture{
+    line-height:0;
     opacity:0;
     animation:hero-img-in-sp 1.4s ease-out .6s forwards;
   }
-  .hero-picture{line-height:0}
-  .hero-img{height:auto}
+  .hero-img{
+    height:auto;
+    object-fit:contain;
+  }
   @keyframes hero-img-in-sp{from{opacity:0}to{opacity:1}}
   .hero-content{padding:36px 24px 0}
   .hero h1{text-shadow:none;margin-top:0}
